@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -6,6 +8,67 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+.header-icon{
+  /* border-radius: 70% 40% 40% 60% / 50% 60% 40% 80%; */
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 3px;
+  mix-blend-mode: multiply;
+  /* animation: top-img infinite 20s linear; */
+}
+
+.top-img{
+  mix-blend-mode: multiply;
+  animation: top-img infinite 20s linear;
+}
+@keyframes top-img {
+  from {
+    /* transform: rotate(0deg); */
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  to {
+    /* transform: rotate(360deg); */
+    transform: rotate3d(1, 1, 1, 359deg);
+  }
+}
+
+.work{
+  transform: rotate(10deg);
+  font-family: 'Mrs Saint Delafield';
+  color: rgba(0, 0, 0, 0.3);
+}
+.fadeIn {
+  animation: fadeIn 1000ms linear both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about{
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 3em;
+}
+.about::before{
+  content: "About";
+  transform: rotate(-100deg);
+  color: rgba(0, 0, 0, 0.3);
+  font-family: 'Mrs Saint Delafield';
+}
+.about-img{
+  border-radius: 70% 90% 90% 90% / 80% 60% 90% 60%;
+  box-shadow: 7px 7px 10px #333;
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

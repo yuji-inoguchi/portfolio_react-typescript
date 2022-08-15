@@ -1,0 +1,8 @@
+{
+    "data": {
+        
+        "title":"Airbnb 模写",
+        "img": "${process.env.PUBLIC_URL}/img/Airbnb_home.jpg"
+        
+    }
+}
