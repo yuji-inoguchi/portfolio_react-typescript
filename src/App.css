@@ -55,19 +55,24 @@
 
 .about{
   color: rgba(0, 0, 0, 0.3);
+  transform: rotate(-10deg);
+  font-family: 'Mrs Saint Delafield';
   font-size: 3em;
 }
-.about::before{
+/* .about::before{
   content: "About";
   transform: rotate(-100deg);
   color: rgba(0, 0, 0, 0.3);
   font-family: 'Mrs Saint Delafield';
-}
+} */
 .about-img{
   border-radius: 70% 90% 90% 90% / 80% 60% 90% 60%;
   box-shadow: 7px 7px 10px #333;
 }
 
+.about-icon:hover{
+  opacity: .5;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

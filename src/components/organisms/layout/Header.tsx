@@ -32,9 +32,12 @@ export const Header = memo(() => {
           justifyContent= "start"
           display={{ base: "none", md: "flex" }}
         >
+            {/* <Box pr={4}>
+                <Link fontSize={"lg"}>Work</Link>
+            </Box>
             <Box pr={4}>
                 <Link fontSize={"lg"}>About</Link>
-            </Box>
+            </Box> */}
         </Flex>
     </Flex>
     </>

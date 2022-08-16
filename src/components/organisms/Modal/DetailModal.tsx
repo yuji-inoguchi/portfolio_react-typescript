@@ -1,4 +1,4 @@
-import { Image, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
+import { Box, Flex, Image, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
 
 import { Home } from "../../pages/Home";
 import { Details } from "../../organisms/Contents/Details";

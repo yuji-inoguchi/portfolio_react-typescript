@@ -32,8 +32,9 @@ export const Details: React.VFC<Props> = (props) => {
             >
                 <Image src={image}/>
                 
-                    <Text textAlign="center" fontSize="lg" fontWeight="bold" mt='5' as='h2' noOfLines={1}>
+                    <Text textAlign="center" fontSize="sm" mt='5' as='h2' noOfLines={1}>
                         {/* {title} */}
+                        {/* - skill - */}
                     </Text>
                     <Text textAlign="center" fontSize="sm" mb='5' as='h2' noOfLines={1}>
                         {detail}
