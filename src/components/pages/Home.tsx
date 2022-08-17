@@ -4,46 +4,57 @@ import { Details } from "../organisms/Contents/Details";
 import '../../App.css';
 import AnimationTrigger from "../AnimationTrigger";
 import { Footer } from "../organisms/layout/Footer";
-
-
+import { createBreakpoints } from "@chakra-ui/theme-tools"
 
 
 export const Home: React.VFC= () => {
 
-
     return (
         <>
         
-        <Flex 
-        justify={"space-around"}
+        <Box p={0} display={{ base: 'block', md: 'flex' }}
+        justifyContent={{ sm: 'space-around' , md: 'space-around' }}
         bg="#ECECE7"
-        pt={200}
+        pt={{ base: 100 , md: 200}}
         >
             <Box
-            maxW={{ base: "100%", md: "xl" }}
+            maxW={{ base: "80%", md: "xl" }}
+            mx={{ base: "auto" , md: 100 }}
             >
                 <Text fontSize='6xl' color="gray.700" fontWeight={"normal"} fontFamily={"mono"}>YUJI INOGUCHI</Text>
                 <Text fontSize='2xl' color="gray.700" fontWeight={"normal"} fontFamily={"mono"}>_  PORTFOLIO SITE  ...</Text>
             </Box>
             <Box
-            maxW={{ base: "100%", md: "sm" }}
-            mr={100}
+            maxW={{ base: "100%" ,md: "sm" }}
+            mt={{ base: 50 , sm: 0 , md: 0 }}
+            mr={{ base: 0 , sm: 0 , md: 100 }}
             >
-                <Image className="top-img" src={`${process.env.PUBLIC_URL}/img/illab-logo.png`}></Image>
+                <Image className="top-img" maxW={{ base: "80%" ,md: "sm" }} src={`${process.env.PUBLIC_URL}/img/illab-logo.png`} mx={{ base: "auto" }}></Image>
             </Box>
 
         
-        </Flex>
+        </Box>
+
         <Image src={`${process.env.PUBLIC_URL}/img/wave.svg`}></Image>
         
-        <Text fontSize={"9xl"} textAlign={"right"} mt={"-7%"} mr={"10%"} mb={"3%"} className={"work"}>_ Work _</Text>
+        <Text
+        maxW={{ base: "90%" , md: "100%" }}
+        fontSize={{ base: "7xl" ,md: "9xl"}} 
+        textAlign={"right"} 
+        mt={{ base: 0 , md:"-7%" }} 
+        mr={{ base: 0 , md:"10%" }} 
+        mb={{ base: 0 , md:"7%" }} 
+        className={"work"}>
+        _ Work _
+        </Text>
+
         <AnimationTrigger animation="fadeIn">
 
             {/* <Text fontSize={"9xl"} fontFamily={"fantasy"} textAlign={"right"} mt={-100} mr={"10%"} className={"work"}>Work</Text> */}
-            <Wrap p={{ base: 4, md: 10 }} justify='center'>
+            <Wrap p={{ base: 0, sm: 10 ,md: 10 }} justify='center'>
                 
                 
-                <Details image={`${process.env.PUBLIC_URL}/img/Airbnb_Home.jpg`} title="Airbnb模写サイト" detail="HTML/CSS" modal={`${process.env.PUBLIC_URL}/img/Airbnb.jpg`}/>
+                <Details image={`${process.env.PUBLIC_URL}/img/Airbnb_home.jpg`} title="Airbnb模写サイト" detail="HTML/CSS" modal={`${process.env.PUBLIC_URL}/img/Airbnb.jpg`}/>
 
                 <Details image={`${process.env.PUBLIC_URL}/img/React_Home.jpg`} title="事業サイト" detail="React/TypeScript" modal={`${process.env.PUBLIC_URL}/img/BusinessSite.jpg`}/> 
                 
@@ -67,24 +78,35 @@ export const Home: React.VFC= () => {
 
 
         
-        <Image mt={-70} src={`${process.env.PUBLIC_URL}/img/wave-footer.svg`}></Image>
+        <Image mt={{ base: 0 , md:-70 }} src={`${process.env.PUBLIC_URL}/img/wave-footer.svg`}></Image>
 
         
-        <Flex 
-        justify={"flex-end"}
+        <Box display={{ base: 'block', md: 'flex' }}
+        justifyContent={{ md:"flex-end" }}
         bg="#ECECE7"
         pt={200}
+        pb={{ base: "15%" , md: "5%" }}
         >
             <Box
-            maxW={{ base: "100%", md: "xl" }}
-            mr={10}
+            maxW={{ base: "90%", md: "xl" }}
+            // mx={{ base: "auto" }}
+            mr={{ base: "auto" , md: 100 }}
+            ml={{ base: "auto" }}
             >
-                <Text fontSize={"9xl"} textAlign={"left"} mt={"-40%"} ml={"-50%"} mb={"10%"} className={"about"}>_ About _</Text>
+                <Text
+                fontSize={{ base: "7xl" ,md: "9xl"}} 
+                textAlign={"left"}
+                mt={{ base: "-30%" , md: "-40%" }}
+                ml={{ base: 0 , md: "-60%" }}
+                mb={{ base: "10%" , md: "10%" }}
+                className={"about"}>
+                _ About _
+                </Text>
                 
                 <Text fontSize='3xl' color="gray.700" fontWeight={"normal"} fontFamily={"mono"}>イノグチユウジ</Text>
-                <Text fontSize='ms' color="gray.700" fontWeight={"normal"} fontFamily={"mono"}pt={5} lineHeight={7}>拝見いただきありがとうございます。
+                <Text fontSize='ms' color="gray.700" fontWeight={"normal"} fontFamily={"mono"}pt={5} lineHeight={7} textAlign={"justify"}>拝見いただきありがとうございます。
                 お仕事をご一緒させていただいているかた、いつもありがとうございます。
-                初めてお会いするかた、初めまして。井ノ口雄次と申します。
+                初めてお会いするかた、初めまして。井ノ口雄次と申します。<br />
                 以前は自動車業界で整備や検査、工程管理をしておりましたが、プログラムでのものづくりに興味をもち、独学で勉強を始め、現在Webエンジニアをしております。<br />
                 制作会社さまと一緒にお仕事をさせていただいたり、個人さまから制作のご依頼をいただいたり、時代に合わせた技術を追いかけつつ、制作したものを使用いただく方の悩みや課題を解決できるよう日々スキルを磨いております。
                 <br />楽しみを忘れずに切磋琢磨しておりますので、これからご縁でご一緒させていただく皆さま、何卒よろしくお願いいたします。
@@ -107,13 +129,17 @@ export const Home: React.VFC= () => {
             </Box>
 
             <Box
-            maxW={{ base: "100%", md: "sm" }}
-            mr={100}
+            maxW={{ base: "80%" , md: "sm" }}
+            // mx={{ base: "auto" }}
+            mr={{ base: "auto" , md: 150}}
+            ml={{ base: "auto" , md: "unset" }}
+            alignItems={"center"}
+            justifyContent={"center"}
             >
-                <Image className="about-img" src={`${process.env.PUBLIC_URL}/img/profile.JPG`}></Image>
+                <Image className="about-img" maxW={{ base: "80%" , md: "100%" }} alignItems={"center"} m={{ base: "auto" , md: "unset" }} mt={{ base: "15%" , md: "unset" }} src={`${process.env.PUBLIC_URL}/img/profile.JPG`}></Image>
             </Box>
 
-        </Flex>
+        </Box>
 
         <Footer />
         </>
