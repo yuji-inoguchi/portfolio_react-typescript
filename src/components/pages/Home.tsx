@@ -1,8 +1,8 @@
-import { Box, Center, Flex, Image, Text, useDisclosure, Wrap } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Wrap } from "@chakra-ui/react";
 import React from "react";
 import { Details } from "../organisms/Contents/Details";
 import '../../App.css';
-import AnimationTrigger from "../AnimationTrigger";
+import AnimationTrigger from "../../atoms/AnimationTrigger";
 import { Footer } from "../organisms/layout/Footer";
 
 

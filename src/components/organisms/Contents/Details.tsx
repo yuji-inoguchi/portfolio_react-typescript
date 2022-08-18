@@ -1,6 +1,4 @@
 import { Box, Image, Spacer, Stack, Text, useDisclosure, WrapItem } from "@chakra-ui/react"
-import { Children, ReactNode } from "react";
-import AnimationTrigger from "../../AnimationTrigger";
 import { DetailModal } from "../../organisms/Modal/DetailModal";
 
 type Props = {
@@ -17,7 +15,7 @@ export const Details: React.VFC<Props> = (props) => {
     return (
     <>
     <WrapItem>
-        {/* <AnimationTrigger animation="fadeIn" triggerOnce> */}
+        
             <Box
             maxW={{ base: "100%", md: "sm" }}
             bg="white"
@@ -42,7 +40,7 @@ export const Details: React.VFC<Props> = (props) => {
                 
                 <DetailModal isOpen={isOpen} onClose={onClose} modal={modal} title={title}/>
             </Box>
-        {/* </AnimationTrigger> */}
+        
     </WrapItem> 
     </>
     )
