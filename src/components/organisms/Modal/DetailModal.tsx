@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
+import { Box, Flex, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
 
 import { Home } from "../../pages/Home";
 import { Details } from "../../organisms/Contents/Details";
@@ -19,6 +19,7 @@ export const DetailModal: React.FC<Props> = ((props) => {
                 <ModalContent>
                     <ModalBody>
                         <Text py={5} textAlign={"center"}>{title}</Text>
+                        <ModalCloseButton variant="unstyled"/>
                         <Image src={modal} alt="" />
                     </ModalBody>
                 </ModalContent>

@@ -18,9 +18,7 @@ export const Header = memo(() => {
     >
         <Flex
           as="a"
-          me={8}
           align="center"
-          _hover={{ cursor: "pointer" }}
         >
             {/* <Heading fontSize='3xl'>Portfolio</Heading> */}
             <Image className="header-icon" maxW={10} src={`${process.env.PUBLIC_URL}/img/illab-logo.png`}></Image>

@@ -4,8 +4,7 @@ import { Details } from "../organisms/Contents/Details";
 import '../../App.css';
 import AnimationTrigger from "../AnimationTrigger";
 import { Footer } from "../organisms/layout/Footer";
-import { createBreakpoints } from "@chakra-ui/theme-tools"
-
+import '../../animation.css'
 
 export const Home: React.VFC= () => {
 
@@ -43,20 +42,20 @@ export const Home: React.VFC= () => {
         textAlign={"right"} 
         mt={{ base: 0 , md:"-7%" }} 
         mr={{ base: 0 , md:"10%" }} 
-        mb={{ base: 0 , md:"7%" }} 
+        mb={{ base: "10%" , md:"7%" }} 
         className={"work"}>
         _ Work _
         </Text>
 
         <AnimationTrigger animation="fadeIn">
 
-            {/* <Text fontSize={"9xl"} fontFamily={"fantasy"} textAlign={"right"} mt={-100} mr={"10%"} className={"work"}>Work</Text> */}
+            
             <Wrap p={{ base: 0, sm: 10 ,md: 10 }} justify='center'>
                 
                 
                 <Details image={`${process.env.PUBLIC_URL}/img/Airbnb_home.jpg`} title="Airbnb模写サイト" detail="HTML/CSS" modal={`${process.env.PUBLIC_URL}/img/Airbnb.jpg`}/>
 
-                <Details image={`${process.env.PUBLIC_URL}/img/React_Home.jpg`} title="事業サイト" detail="React/TypeScript" modal={`${process.env.PUBLIC_URL}/img/BusinessSite.jpg`}/> 
+                <Details image={`${process.env.PUBLIC_URL}/img/React_Home.jpg`} title="ポートフォリオ" detail="React/TypeScript" modal={`${process.env.PUBLIC_URL}/img/Portfolio.jpg`}/> 
                 
                 <Details image={`${process.env.PUBLIC_URL}/img/SampleSite_Home.jpg`} title="サンプルサイト" detail="HTML/CSS"  modal={`${process.env.PUBLIC_URL}/img/SampleSite.jpg`}/>
                 
@@ -98,7 +97,7 @@ export const Home: React.VFC= () => {
                 textAlign={"left"}
                 mt={{ base: "-30%" , md: "-40%" }}
                 ml={{ base: 0 , md: "-60%" }}
-                mb={{ base: "10%" , md: "10%" }}
+                mb={{ base: "20%" , md: "10%" }}
                 className={"about"}>
                 _ About _
                 </Text>

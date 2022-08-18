@@ -20,10 +20,8 @@ export const Footer = memo(() => {
         
         <Flex
           as="a"
-          me={8}
           align="center"
           justify={"flex-end"}
-          _hover={{ cursor: "pointer" }}
         >
             {/* <Heading fontSize='3xl'>Portfolio</Heading> */}
             <Image className="header-icon" maxW={10} src={`${process.env.PUBLIC_URL}/img/illab-logo.png`}></Image>
