@@ -4,7 +4,7 @@ import { Details } from "../organisms/Contents/Details";
 import '../../App.css';
 import AnimationTrigger from "../AnimationTrigger";
 import { Footer } from "../organisms/layout/Footer";
-import '../../animation.css'
+
 
 export const Home: React.VFC= () => {
 
