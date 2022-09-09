@@ -103,3 +103,7 @@ _:lang(x)+_:-webkit-full-screen-document, .top-img{
     transform: rotate(360deg);
   }
 }
+
+.appbox {
+  margin: 24px!important;
+}

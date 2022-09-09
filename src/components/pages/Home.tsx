@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text, Wrap } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, Text, Wrap } from "@chakra-ui/react";
 import React from "react";
 import { Details } from "../organisms/Contents/Details";
 import '../../App.css';
@@ -57,7 +57,57 @@ export const Home: React.VFC= () => {
 
                 <Details image={`${process.env.PUBLIC_URL}/img/React_Home.jpg`} title="ポートフォリオ" detail="React/TypeScript" modal={`${process.env.PUBLIC_URL}/img/Portfolio.jpg`}/> 
                 
-                <Details image={`${process.env.PUBLIC_URL}/img/SampleSite_Home.jpg`} title="サンプルサイト" detail="HTML/CSS"  modal={`${process.env.PUBLIC_URL}/img/SampleSite.jpg`}/>
+            
+                {/* <Details image={`${process.env.PUBLIC_URL}/img/Task-M_Home.jpg`} title="タスク管理アプリ" detail="React"  
+                modal={`${process.env.PUBLIC_URL}/img/SampleSite.jpg`}/> */}
+{/*                 
+                <a href="https://task-m-react.vercel.app/" target="_blank" rel="noreferrer"> */}
+                
+                <Link href="https://task-m-react.vercel.app/" target="_blank" rel="noreferrer"
+                maxW={{ base: "100%", md: "sm" }}
+                bg="white"
+                borderRadius="10px"
+                shadow="md"
+                _hover={{ cursor: "pointer", opacity: "0.8" }}
+                overflow='hidden'
+                justifyContent={"center"}
+                className={"appbox"}
+                height={"100%"}
+                
+                >
+                    {/* <Box
+                    margin={"20px"}
+                    maxW={{ base: "100%", md: "sm" }}
+                    bg="white"
+                    borderRadius="10px"
+                    shadow="md"
+                    _hover={{ cursor: "pointer", opacity: "0.8" }}
+                    overflow='hidden'
+                    justifyContent={"center"}
+                    className={"appbox"}
+                    > */}
+                        {/* <a href="https://task-m-react.vercel.app/" target="_blank" rel="noreferrer"> */}
+                            <img src="/img/Task-M_Home.jpg" alt="" />
+                            <Box display={"flex"}
+                                justifyContent={"center"}
+                                alignContent={"center"}>
+                                <Text
+                                display={"flex"}
+                                justifyContent={"center"}
+                                alignContent={"center"}
+                                fontSize="sm"
+                                as='h2'
+                                noOfLines={1}
+                                my={"5.5%"}
+                                // height={"5vh"}
+                                >
+                                React
+                                </Text>
+                            </Box>
+                        
+                    {/* </Box> */}
+                {/* </a> */}
+                </Link>
                 
                 <Details image={`${process.env.PUBLIC_URL}/img/ShopifySite_Home.jpg`} title="制作会社様ご依頼" detail="HTML/CSS/JavaScript/Shopify/Liquid" modal={`${process.env.PUBLIC_URL}/img/ShopifySite.jpg`}/>
                 
